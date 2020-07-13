@@ -9,7 +9,7 @@ import time
 socketPort = 5000
 
 #serial communication settings
-bautrate = 500000
+baudrate = 500000
 
    
 print("          \'x|`\r\n        \'|xx| `          \'|x|\r\n`   \'    |xx|    `   \'    |x|`\r\n         |xx|             |x|\r\n============|===============|===--\r\n~~~~~~~~~|xx|~~~~~~~~~~~~~|x|~~~~~~\n        UDP <--------> Serial\n")
@@ -26,7 +26,7 @@ ports = list(serial.tools.list_ports.comports())
 connections={}
 for p in ports:
     port = (str(p).split(" ")[0])
-    connection = serial.Serial(port, bautrate, timeout=2)
+    connection = serial.Serial(port, baudrate, timeout=2)
     if connection.is_open:
         while(connection.read()):
             pass
