@@ -52,7 +52,8 @@ while 1:
         data, addr = s.recvfrom(1024)
         data = bytesToStr(data)
         uid = int(data[:data.find(':')])
-        connections[uid].write(strToBytes(data[data.find(':'):]))
+        connections[uid].write(strToBytes(data[data.find(':')+1:]))
+        print(strToBytes(data[data.find(':')+1:]))
     except:
         pass
 
