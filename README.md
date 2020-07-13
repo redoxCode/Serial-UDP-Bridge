@@ -1,7 +1,7 @@
 # Serial-UDP-Bridge
 A bridge between several custom serial devices (arduino) and one UDP port.
 
-Serial devices are expected to have the same baudrate andfolow a simple protocol:
+Serial devices are expected to have the same baudrate and follow a simple protocol:
 If they get asked for an id ('I?\n') they should answer with a unique id ('1','2',...)
 
 Messages from the serial devices going to the UDP connection are prefixed with that id followed by a ':' and the message.
